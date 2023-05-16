@@ -72,3 +72,22 @@
     margin: 0;
     padding: 0;
 }
+
+.EditableArea p a{
+    color: gray;
+    text-decoration: none;
+}
+
+.EditableArea form input{
+    width: 100%; 
+    border-radius: 10px; 
+    color: white;
+    background-color: var(--PersianBlue);
+    border-width: 0;
+}
+
+.EditableArea form input:hover{
+    background-color: var(--Aero);
+    transition: 0.5s;
+    
+}

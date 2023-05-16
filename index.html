@@ -42,9 +42,6 @@
     </style>
 
     <script src="/tweak/javascript/tweak.js"></script>
-    <script>
-        defaultAlign();
-    </script>
 
     <title>Ocean One: Protecting the Ocean for Future Generations</title>
 
@@ -107,13 +104,16 @@
                         <div class="top" >
                             <h2>ALIGN</h2>
                             <div class="EditableArea" id="editableTextArea">
-                                <p>66% of people (73% of Millennials) are willing to pay 
+                                <p id="ALIGN_MESSAGE">66% of people (73% of Millennials) are willing to pay 
                                     more for products and services from companies 
-                                    committed to positive social and environmental impact.</p>
+                                    committed to positive social and environmental impact.
+                                    <sup><a href='##' onclick="TextEditALIGN()">[Click To Edit]</a></sup>
+                                </p>
+                                    
                             </div>
                         </div>
                         <div class="bottom">
-                            <p>LEARN MORE | <a href="" onclick="defaultAlign()">EDIT</a></p>
+                            <p>LEARN MORE</p>
                         </div>
                     </div>
                 </button>
@@ -274,11 +274,11 @@
             <h1>GET IN TOUCH</h1>
         </div>
 
-        <div class="row">
+        <div class="row wrap">
             <div class="col">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253862.07591608533!2d106.56645034215134!3d-6.184928810497612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f428c455d5cd%3A0x1813f5f9363bcd6!2sCoordinating%20Ministry%20for%20Maritime%20%26%20Investment%20Affairs!5e0!3m2!1sen!2sid!4v1683366773377!5m2!1sen!2sid" 
-                    width="800" 
-                    height="800" 
+                    width="100%" 
+                    height="100%" 
                     style="border:0;" 
                     allowfullscreen="" 
                     loading="lazy" 
@@ -287,16 +287,16 @@
             </div>
 
             <div class="col">
-                <form>
+                <form id="getInTouchForm">
                     <div class="form-group">
                         <label for="Name"><h2>Name</h2></label>
-                        <input type="text" class="form-control" placeholder="Marry Jone">
+                        <input id="NameInput" type="text" class="form-control" placeholder="Marry Jone">
                     </div>
                     <br><br>
 
                     <div class="form-group">
                       <label for="Email"><h2>Email address</h2></label>
-                      <input type="email" class="form-control" id="Email" 
+                      <input type="email" class="form-control" id="EmailInput" 
                       aria-describedby="emailHelp" placeholder="marryjone@hotmail.com">
                       <small id="emailHelp" 
                       class="form-text text-muted"
@@ -308,20 +308,28 @@
                         <label for="Message"><h2>Write Your Message</h2> </label>
                         <textarea name="Message" 
                             class="form-control"
-                            id="Message" 
                             cols="30" 
                             rows="10"
+                            id="MessageInput"
                             form="contactUsForm">Write your message here...
                         </textarea>
                     </div>
                     <br><br>
-
-                    <button type="submit" class="btn btn-primary"><p>Submit</p></button>
-
+                    <button 
+                        type="submit" 
+                        class="btn btn-primary" 
+                        onclick="submitForm(event)">
+                        <p>Submit</p>
+                    </button>
                   </form>
             </div>
         </div>
+        <div class="result" id="resultForm"></div>
     </div>
+
+
+
+    <!-- Footer -->
     <div class="footer">
         <div class="row">
             <div class="col">

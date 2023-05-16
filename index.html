@@ -41,6 +41,11 @@
         }
     </style>
 
+    <script src="/tweak/javascript/tweak.js"></script>
+    <script>
+        defaultAlign();
+    </script>
+
     <title>Ocean One: Protecting the Ocean for Future Generations</title>
 
 </head>
@@ -84,7 +89,7 @@
 
             <!-- Button -->
             <a href="#Actions" style="text-decoration-line: none;">
-                <button class="button">
+                <button class="button" onclick="takeActionButton()">
                     <p>Take Action</p>
                 </button>
             </a>
@@ -99,14 +104,16 @@
             <div class="col">
                 <button class="btncard">
                     <div class="card">
-                        <div class="top">
+                        <div class="top" >
                             <h2>ALIGN</h2>
-                            <p>66% of people (73% of Millennials) are willing to
-                                pay more for products and services from companies
-                                committed to positive social and environmental impact.</p>
+                            <div class="EditableArea" id="editableTextArea">
+                                <p>66% of people (73% of Millennials) are willing to pay 
+                                    more for products and services from companies 
+                                    committed to positive social and environmental impact.</p>
+                            </div>
                         </div>
                         <div class="bottom">
-                            <p>LEARN MORE</p>
+                            <p>LEARN MORE | <a href="" onclick="defaultAlign()">EDIT</a></p>
                         </div>
                     </div>
                 </button>

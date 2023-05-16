@@ -50,6 +50,7 @@
     justify-content: space-between;
 
     min-height: 500px;
+    min-width: 300px;
 
 }
 
@@ -65,4 +66,9 @@
 
 .sectionTwo .card p.desc{
     text-align: center;
+}
+
+.EditableArea{
+    margin: 0;
+    padding: 0;
 }

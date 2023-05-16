@@ -1,0 +1,140 @@
+:root {
+    --RoyalBlue: #03256c;
+    --PersianBlue: #2541B2;
+    --GreenBlue: #1768AC;
+    --Aero: #06BEE1;
+    --White: #FFFFFF;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.oceanNavbar{
+    background-color: rgba(255, 255, 255, 0.577);
+    z-index: 3;
+}
+
+.oceanNavbar .navbar{
+    width: 100%;
+    justify-content: space-between;
+    padding: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.oceanNavbar .navbar .costumMenu{
+    width: 50%;
+    justify-content: space-between;
+    font-size: larger;
+}
+
+.oceanNavbar .navbar .costumMenu a:hover{
+    color: var(--Aero);
+    transition: 0.4s;
+}
+
+.sectionOne {
+    background-image: url("../assets/img/ocean-plastic.webp");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.sectionOne .container{
+    color: var(--White);
+}
+
+.sectionOne .container .title{
+    text-align: center;
+    font-weight: 700;
+    font-size: 3rem;
+    text-shadow: 2px 2px 100px var(--RoyalBlue);
+}
+
+.sectionOne .container .description{
+    text-align: center;
+    font-weight: 500;
+    font-size: 1rem;
+    text-shadow: 2px 2px 100px var(--RoyalBlue);
+    
+}
+
+.sectionOne .container .button{
+    padding: 10px;
+    width: 40%;
+    background: var(--White);
+    color: var(--GreenBlue);
+    border-radius: 30px;
+    border: 0px;
+    margin-top: 4svw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+}
+
+.sectionOne .container .button:hover{
+    background: var(--Aero);
+    color: var(--White);
+    transition: 0.3s;
+}
+
+.sectionOne .container .button p{
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+    
+}
+
+@media (min-width: 750px){
+    .sectionOne .container .title{
+        text-align: center;
+        font-weight: 700;
+        font-size: 5rem;
+        text-shadow: 2px 2px 100px var(--RoyalBlue);
+    }
+    
+    .sectionOne .container .description{
+        text-align: center;
+        font-weight: 500;
+        font-size: 2rem;
+        text-shadow: 2px 2px 100px var(--RoyalBlue);
+        
+    }
+}
+
+@media (min-width: 1000px){
+    .sectionOne .container .title{
+        text-align: center;
+        font-weight: 800;
+        font-size: 7rem;
+        text-shadow: 2px 2px 100px var(--RoyalBlue);
+    }
+    
+    .sectionOne .container .description{
+        text-align: center;
+        font-weight: 500;
+        font-size: 2rem;
+        text-shadow: 2px 2px 100px var(--RoyalBlue);
+        
+    }
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
+
+
+
+

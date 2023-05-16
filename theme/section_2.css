@@ -1,0 +1,68 @@
+:root {
+    --RoyalBlue: #03256c;
+    --PersianBlue: #2541B2;
+    --GreenBlue: #1768AC;
+    --Aero: #06BEE1;
+    --White: #FFFFFF;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.sectionTwo{
+    width: 100%;
+    padding: 5%;
+}
+
+.sectionTwo h1 {
+    font-weight: 700;
+    color: var(--Aero);
+}
+
+.sectionTwo h2 {
+    font-weight: 600;
+    color: var(--Aero);
+}
+
+.sectionTwo .btncard{
+    height: fit-content;
+    background-color: #f0f0f098;
+    border: 0;
+    border-radius: 10px;
+    
+    margin: 40px;    
+    
+}
+
+.sectionTwo .btncard:hover{
+    transition: 0.7s;
+    background-color: var(--White);
+}
+
+.sectionTwo .btncard .card{
+    text-align: left;
+    background-color: transparent;
+    border: 0;
+    padding: 50px;
+    height: fit-content;
+    display: flex wrap;
+    justify-content: space-between;
+
+    min-height: 500px;
+
+}
+
+.sectionTwo .btncard .card .top{
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+.sectionTwo .btncard .card .bottom{
+    text-align: center;
+    color: var(--RoyalBlue);
+}
+
+.sectionTwo .card p.desc{
+    text-align: center;
+}

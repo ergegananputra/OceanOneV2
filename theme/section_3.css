@@ -1,0 +1,69 @@
+:root {
+    --RoyalBlue: #03256c;
+    --PersianBlue: #2541B2;
+    --GreenBlue: #1768AC;
+    --Aero: #06BEE1;
+    --White: #FFFFFF;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.sectionThree{
+    background: url("../assets/img/OceanCleanUp.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    padding: 5%;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.sectionThree h1{
+    color: var(--White);
+    font-weight: 700;
+    font-size: 5rem;
+}
+
+.sectionThree .card{
+    background-color: transparent;
+    border: 0;
+    align-content: center;
+    text-align: center;
+    padding: 50px;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.sectionThree .card:hover{
+    background-color: #ffffff20;
+    transition: 0.5s;
+}
+
+.sectionThree .card p{
+    font-size: 20px;
+    color: var(--White);
+}
+
+.sectionThree a {
+    text-decoration: none; 
+}
+
+
+
+.sectionThree .row{
+    display: flex;
+    align-content: stretch;
+    justify-content: space-evenly;
+}
+
+.icon{
+    fill: var(--White);
+}

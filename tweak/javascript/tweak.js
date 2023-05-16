@@ -23,20 +23,17 @@ function TextUpdateALIGN(){
 }
 
 function submitForm(event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault();
 
-    // Get form input values
     var name = document.getElementById("NameInput").value;
     var email = document.getElementById("EmailInput").value;
     var message = document.getElementById("MessageInput").value;
 
-    // Construct the result HTML
     var resultHTML = "<h2>Your Form is Submitted.</h2>" +
         "<p>Hi " + name + "!</p>" +
         "<p>Thank you for participating. Check your " + email + " to see the follow up</p>" +
         "<p>Message : <br>" + message + "</p>";
 
-    // Display the result in the resultForm div
     var resultForm = document.getElementById("resultForm");
     resultForm.innerHTML = resultHTML;
 }

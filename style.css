@@ -1,0 +1,51 @@
+:root {
+    --RoyalBlue: #03256c;
+    --PersianBlue: #2541B2;
+    --GreenBlue: #1768AC;
+    --Aero: #06BEE1;
+    --White: #FFFFFF;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    text-align: center;
+    width: 60%;
+    padding: 50px;
+    background-color: rgb(249, 249, 249) !important;
+}
+
+.card h1{
+    color: rgb(255, 115, 0);
+    font-weight: bold;
+}
+
+.bold{
+    font-weight: bold;
+    text-align: left;
+    height: 50px;
+}
+
+.card{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.summary{
+    display: flex;
+    width: 55%;
+}
+
+.result{
+    color: rgb(255, 115, 0);
+    font-weight: bolder;
+}

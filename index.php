@@ -41,8 +41,6 @@
         }
     </style>
 
-    <script src="/tweak/javascript/tweak.js"></script>
-
     <title>Ocean One: Protecting the Ocean for Future Generations</title>
 
 </head>
@@ -98,57 +96,10 @@
     <div class="sectionTwo" id="Actions">
         <h1 style="margin: 0 0 50px 0;">OFFSET YOUR <br>PLASTIC FOOTPRINT</h1>
         <div class="row justify-content-center align-items-start g-2">
-            <div class="col">
-                <button class="btncard">
-                    <div class="card">
-                        <div class="top" >
-                            <h2>ALIGN</h2>
-                            <div class="EditableArea" id="editableTextArea">
-                                <p id="ALIGN_MESSAGE">66% of people (73% of Millennials) are willing to pay 
-                                    more for products and services from companies 
-                                    committed to positive social and environmental impact.
-                                    <sup><a href='##' onclick="TextEditALIGN()">[Click To Edit]</a></sup>
-                                </p>
-                                    
-                            </div>
-                        </div>
-                        <div class="bottom">
-                            <p>LEARN MORE</p>
-                        </div>
-                    </div>
-                </button>
-            </div>
-            <div class="col">
-                <button class="btncard">
-                    <div class="card">
-                        <div class="top">
-                            <h2>KICKSTART</h2>
-                            <p>Ocean One are a turnkey solution to begin the journey
-                                of reducing your business’s environmental footprint
-                                or going plastic neutral.</p>
-                        </div>
-                        <div class="bottom">
-                            <p>START ACTION</p>
-                        </div>
-                    </div>
-                </button>
-            </div>
-
-            <div class="col">
-                <button class="btncard">
-                    <div class="card">
-                        <div class="top">
-                            <h2>AMPLIFY</h2>
-                            <p>Is your actions already making strides in its commitment
-                                to sustainability? Measure your action success
-                                using IMPACT</p>
-                        </div>
-                        <div class="bottom">
-                            <p>SEE HOW</p>
-                        </div>
-                    </div>
-                </button>
-            </div>
+            <?php 
+                include "section2.php";
+                mysqli_close($conn);
+            ?>
         </div>
     </div>
     
@@ -368,9 +319,49 @@
         </div>
     </div>
 
-
-
+    
     <!-- Script -->
+    <script>
+        function takeActionButton(){
+            alert("I am taking action");
+        }
+
+        function TextEditALIGN(index){
+            var originalTextALIGN = document.getElementById("ALIGN_MESSAGE").innerText;
+            var textALIGN = originalTextALIGN.substring(0, originalTextALIGN.length - 15);
+
+            document.getElementById("editableTextArea"+index).innerHTML = '\
+            <form> \
+                <textarea name="textEdit" id="textEdit'+index+'" cols="30" rows="10" style="border-radius: 10px; padding: 10px;">' +
+                    textALIGN +
+                '</textarea>\
+                <br>\
+                <input type="submit" value="Save" onclick="TextUpdateALIGN('+index+')">\
+            </form>';
+        }
+
+        function TextUpdateALIGN(index){
+            var text = document.getElementById("textEdit"+index).value;
+            document.getElementById("editableTextArea"+index).innerHTML = '<p>'+ text + '\
+            <sup><a href="##" onclick="TextEditALIGN('+index+')">[Click To Edit]</a></sup></p>';
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+
+            var name = document.getElementById("NameInput").value;
+            var email = document.getElementById("EmailInput").value;
+            var message = document.getElementById("MessageInput").value;
+
+            var resultHTML = "<h2>Your Form is Submitted.</h2>" +
+                "<p>Hi " + name + "!</p>" +
+                "<p>Thank you for participating. Check your " + email + " to see the follow up</p>" +
+                "<p>Message : <br>" + message + "</p>";
+
+            var resultForm = document.getElementById("resultForm");
+            resultForm.innerHTML = resultHTML;
+        }
+    </script>
     <script>
         let screeenHeight = screen.height;
         document.getElementById("screenHeight").style.height = screeenHeight + "px";
